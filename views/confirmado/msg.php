@@ -1,0 +1,1 @@
+<h1 class="alerta repeated">CONFIRMA TU CUENTA</h1>
