@@ -15,8 +15,7 @@ $router = new Router();
 //INICIO SESION
 $router->get('/',[logController::class, 'login']);
 $router->post('/',[logController::class, 'login']);
-$router->get('/index.php',[logController::class, 'login']);
-$router->post('/index.php',[logController::class, 'login']);
+
 // CERRAR SESION
 $router->get('/log/logout',[logController::class, 'logout']);
 

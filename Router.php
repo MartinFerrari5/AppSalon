@@ -27,11 +27,11 @@ class Router
         // $rutas_protegidas = ['/admin', '/propiedades/crear', '/propiedades/actualizar', '/propiedades/eliminar', '/vendedores/crear', '/vendedores/actualizar', '/vendedores/eliminar'];
 
          $auth = $_SESSION['login'] ?? null;
-         $url= explode('/public',$_SERVER['REQUEST_URI']);
-         $url= implode('', $url);
-         $url= explode('?',$url);
-        //  debuguear($_SERVER['REQUEST_URI'] );
-        $currentUrl = $_SERVER['REQUEST_URI'] == '' ? '/' : $url[0];
+        //  $url= explode('/public',$_SERVER['REQUEST_URI']);
+        //  $url= implode('', $url);
+        //  $url= explode('?',$url);
+        // debuguear($_SERVER['REQUEST_URI'] );
+        $currentUrl = $_SERVER['REQUEST_URI'] == '' ? '/' : $_SERVER['REQUEST_URI'] ;
         $method = $_SERVER['REQUEST_METHOD'];
       
         if ($method === 'GET') {
