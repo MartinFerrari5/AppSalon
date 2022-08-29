@@ -68,7 +68,7 @@ class APIcontroller{
             // NOS REDIRIGE A LA PAGINA DE DONDE VENIAMOS
             header('Location:' . $_SERVER['HTTP_REFERER'] . '?msg=deleted');
             }elseif($opcion=='actualizar'){
-                header("Location: /public/admin/actualizarServicios?id={$id}");
+                header("Location: ../actualizarServicios?id={$id}");
             }
            
           
@@ -92,7 +92,7 @@ class APIcontroller{
                 
                 $resultado=$servicio->guardar();
                 if($resultado){
-                    header('Location: /public/admin/verServicios?msg=created');
+                    header('Location: verServicios?msg=created');
                 }
             }
          }

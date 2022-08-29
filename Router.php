@@ -19,7 +19,7 @@ class Router
 
     public function comprobarRutas()
     {
-        
+        // debuguear($this->getRoutes);
         // Proteger Rutas...
         //session_start();
 
@@ -27,12 +27,15 @@ class Router
         // $rutas_protegidas = ['/admin', '/propiedades/crear', '/propiedades/actualizar', '/propiedades/eliminar', '/vendedores/crear', '/vendedores/actualizar', '/vendedores/eliminar'];
 
          $auth = $_SESSION['login'] ?? null;
-        //  $url= explode('/public',$_SERVER['REQUEST_URI']);
-        //  $url= implode('', $url);
-        //  $url= explode('?',$url);
+         $url= explode('/App-salon/public',$_SERVER['REQUEST_URI']);
+         $url= implode('', $url);
+         $url= explode('?',$url);
+     
         // debuguear($_SERVER['REQUEST_URI'] );
-        $currentUrl = $_SERVER['REQUEST_URI'] == '' ? '/' : $_SERVER['REQUEST_URI'] ;
+        // $currentUrl = $_SERVER['REQUEST_URI'] == '' ? '/' : $_SERVER['REQUEST_URI'] ;
         $method = $_SERVER['REQUEST_METHOD'];
+        $currentUrl=$url[0];
+        
       
         if ($method === 'GET') {
             $fn = $this->getRoutes[$currentUrl] ?? null;
