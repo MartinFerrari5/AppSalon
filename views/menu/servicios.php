@@ -57,7 +57,7 @@
 
         </div>
     </div>
-    </div>
+    </div> <div></div>
     <div class="paginacion">
         <button class="arrows left ocultar"> &laquo; Anterior</button>
         <button class="arrows right">Posterior &raquo; </button>
