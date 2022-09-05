@@ -55,6 +55,7 @@ class APIcontroller{
     //     }
     // }
     public static function editarServicio(){
+       
         $auth=login();
         if($auth['admin']!=1){
             header('Location: /public/');
@@ -64,17 +65,20 @@ class APIcontroller{
             $opcion=$_POST['boton'];
             if($opcion=='eliminar'){
                 $resultado=Servicios::find('id', $_POST['id']);
-            $resultado->eliminar();
+            // $resultado->eliminar();
             // NOS REDIRIGE A LA PAGINA DE DONDE VENIAMOS
             header('Location:' . $_SERVER['HTTP_REFERER'] . '?msg=deleted');
             }elseif($opcion=='actualizar'){
-                header("Location: /public/admin/actualizarServicios?id={$id}");
+               
+                header("Location: /admin/actualizarServicios?id={$id}");
+                debuguear($_SERVER['REQUEST_URI']);
             }
            
           
         }
     }
     public static function actualizarServicio(Router $router){
+        debuguear('service');
         $auth=login();
         if($auth['admin']!=1){
             header('Location: /public/');

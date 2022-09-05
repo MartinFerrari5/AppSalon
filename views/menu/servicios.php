@@ -64,7 +64,7 @@
     </div>
     
 </div>
-<script src="build/js/app.js"></script> 
+<script src="public/build/js/app.js"></script> 
 <?php $script='<link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
 

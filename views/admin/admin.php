@@ -1,4 +1,5 @@
 <?php include_once __DIR__ . '/../templates/cierreSesion.php'  ;
+debuguear($_SERVER['REQUEST_URI']);
 $msg=$_GET['msg'] ?? '';
 if($msg=='created'):?>
     <p class="alerta correcto"><?php echo "Servicio creado con éxito" ?></p>
@@ -71,5 +72,5 @@ if($msg=='created'):?>
          <?php endif;?>
          <?php endforeach;?>
           
-        <script src="build/js/buscador.js"></script>
+        <script src="/public/build/js/buscador.js"></script>
 </div>

@@ -9,7 +9,7 @@ class AdminController {
     public static function index(Router $router){
         $auth=login();
         if($auth['admin']!=1){
-            header('Location: /public/');
+            header('Location: /');
         }
         // FECHA ACTUAL
         $date=$_GET['fecha'] ?? date('Y-m-d');
@@ -51,7 +51,7 @@ class AdminController {
         $auth=login();
        
         if($auth['admin']!=1){
-            header('Location: /public/');
+            header('Location: /');
         }
         $servicios=Servicios::all();
         
