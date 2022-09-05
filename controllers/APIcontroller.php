@@ -69,16 +69,19 @@ class APIcontroller{
             // NOS REDIRIGE A LA PAGINA DE DONDE VENIAMOS
             header('Location:' . $_SERVER['HTTP_REFERER'] . '?msg=deleted');
             }elseif($opcion=='actualizar'){
+
                
                 header("Location: /admin/actualizarServicios?id={$id}");
-                debuguear($_SERVER['REQUEST_URI']);
+               
+
+
             }
            
           
         }
     }
     public static function actualizarServicio(Router $router){
-        debuguear('service');
+      
         $auth=login();
         if($auth['admin']!=1){
             header('Location: /public/');
@@ -96,7 +99,7 @@ class APIcontroller{
                 
                 $resultado=$servicio->guardar();
                 if($resultado){
-                    header('Location: /public/admin/verServicios?msg=created');
+                    header('Location: verServicios?msg=created');
                 }
             }
          }
